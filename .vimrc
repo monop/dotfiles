@@ -36,7 +36,7 @@ set whichwrap+=<,>,h,l
 
 " Helpful for navigating filesystem with :e <tab>, :e <shift-tab>
 set wildmenu
-set wildmode=full
+set wildmode=list:longest,full
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File backups
@@ -130,11 +130,23 @@ endfunction
 " ^ ^ ^
 map <leader>c :call ToggleSyntax()<CR>
 
-map <leader>l :ls<CR>
+" I really like this!
+" <Space>b to list buffers
+" <Enter> to close or <Number><Enter> to go to that buffer.
+nnoremap <leader>b :buffers<CR>:buffer<Space>
+
+" Previous/Next buffer
 map <leader>, :bp<CR>
 map <leader>. :bn<CR>
+
+" Delete buffer/Close file. Write first or lose changes!
 map <leader>d :bd<CR>
+
+" Open file in new buffer. Try it with <Tab> to navigate filesystem.
 map <leader>e :e<Space>
+
+" Write/Save file
+map <leader>w :w<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Magic
