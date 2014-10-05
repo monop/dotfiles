@@ -1,2 +1,8 @@
-*
+/*
 !.gitignore
+!.gitconfig
+!.bash_profile
+!.bashrc
+!/.vim
+/.vim/.netrwhist
+!.vimrc

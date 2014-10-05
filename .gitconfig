@@ -1,0 +1,5 @@
+[user]
+	name = Patrick Henning
+	email = pthenning@gmail.com
+[credential]
+	helper = osxkeychain
