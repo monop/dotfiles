@@ -118,7 +118,8 @@ map <leader>s :setlocal spell!<CR>
 map <leader>t :r !date<CR>
 
 " Toggle syntax highlighting. Troubling side-effect of botching
-" some syntax stuff when turning syntax back on. Haven't
+" some syntax stuff when turning syntax back on.
+" Haven't figured out solution.
 function! ToggleSyntax()
     if exists("g:syntax_on")
         syntax off
@@ -139,14 +140,31 @@ nnoremap <leader>b :buffers<CR>:buffer<Space>
 map <leader>, :bp<CR>
 map <leader>. :bn<CR>
 
-" Delete buffer/Close file. Write first or lose changes!
-map <leader>d :bd<CR>
+" Delete buffer/Close file and remove split.
+map <leader>r :bd<CR>
+
+" Delete buffer/Close file and keep split.
+" Doesn't work with only one buffer left. Also deletes splits.
+map <leader>d :bp\|bd #<CR>
 
 " Open file in new buffer. Try it with <Tab> to navigate filesystem.
-map <leader>e :e<Space>
+map <leader>o :e<Space>
 
 " Write/Save file
 map <leader>w :w<CR>
+
+" Run current file as python script
+map <leader>r :!python %<CR>
+
+" Create horizontal/vertical split
+map <leader>- :split<CR>
+map <leader>\ :vsplit<CR>
+
+" Go left/right/up/down a window
+map <leader>h <c-w>h
+map <leader>l <c-w>l
+map <leader>k <c-w>k
+map <leader>j <c-w>j
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Magic
