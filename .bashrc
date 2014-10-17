@@ -13,7 +13,9 @@ export LS_COLORS="ExFxBxDxCxegedabagacad"
 
 # Italics in iterm. Tutorial:
 # https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
-export TERM="xterm-256color-italic"
+#
+# This can be a hassle when ssh'ing. Disabled for now.
+#export TERM="xterm-256color-italic"
 
 ######################################################################
 # Text Editor

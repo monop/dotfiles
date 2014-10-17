@@ -38,6 +38,10 @@ set whichwrap+=<,>,h,l
 set wildmenu
 set wildmode=list:longest,full
 
+" Among other things I don't understand, allows switching buffers without
+" saving first.
+set hidden
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File backups
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,10 +62,10 @@ colorscheme wombat256mod
 "hi LineNr ctermfg=gray
 
 "hi clear Comment
-hi Comment cterm=italic gui=italic ctermfg=darkgray
+"hi Comment cterm=italic gui=italic ctermfg=darkgray
 
 "hi clear String
-hi String cterm=italic gui=italic
+"hi String cterm=italic gui=italic
 
 hi clear SpellBad
 hi SpellBad ctermbg=white ctermfg=black
